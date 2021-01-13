@@ -22,3 +22,34 @@ h6 {
     font-family: "Patua One", serif;
     letter-spacing: 2px;
 }
+
+#movie-schedule{
+    display: flex;
+}
+
+.moviemovie{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+img{
+    height: 20em;
+    width: 15em;
+}
+
+img.G{
+    border: 10px dotted green;
+}
+
+img.PG{
+    border: 10px dotted yellow;
+}
+
+img.PG-13{
+    border: 10px dotted orange;
+}
+
+img.R{
+    border: 10px dotted red;
+}

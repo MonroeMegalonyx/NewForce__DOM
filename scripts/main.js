@@ -176,14 +176,25 @@ let movieSchedule = [
 // document.querySelector("#release-date").innerHTML = `${movieObject.releaseDate}
 
 for (let i = 0; i < movieSchedule.length; i++) {
-    
-    if (movieSchedule[i].hasOwnProperty("poster")) {
-    document.querySelector(
-        "#movie-schedule"
-    ).innerHTML += `<h1>${movieSchedule[i].title}</h1><p>RATING: ${movieSchedule[i].rating}</p><i>Is it true its playing today? That's ${movieSchedule[i].currentlyPlaying}</i> <img src=${movieSchedule[i].poster} width = 100>`;
-    } else document.querySelector(
-        "#movie-schedule"
-    ).innerHTML += `<h1>${movieSchedule[i].title}</h1><p>${movieSchedule[i].rating}</p><i>Is it true its playing today? That's ${movieSchedule[i].currentlyPlaying}`;
-}
+    // If its currently playing and has a poster, add it to index
+    if (movieSchedule[i].hasOwnProperty("poster") && movieSchedule[i].currentlyPlaying) {
+        document.querySelector("#movie-schedule").innerHTML += 
+        `<section class="moviemovie"><h1>${movieSchedule[i].title}</h1><p>RATING: ${movieSchedule[i].rating}</p><b>GET YOUR TICKETS NOW</b><img src=${movieSchedule[i].poster} class="${movieSchedule[i].rating}">`        
+    } else
+        // If its currently playing but has no poster, add a placeholder and put it on the index
+        if (movieSchedule[i].currentlyPlaying) {
+            document.querySelector("#movie-schedule").innerHTML += 
+            `<section class="moviemovie"><h1>${movieSchedule[i].title}</h1><p>RATING: ${movieSchedule[i].rating}</p><b>GET YOUR TICKETS NOW</b><img src="https://www.snhrc.com/wp-content/uploads/2018/09/Image-Coming-Soon.png">`;
+        }; // If its not currently playing then dont add it to the index
+    };
 
-// I want to only include posters for movies that have them, but the for loop ends the first time the if statement fails
+// Exercise 5. Movie Scheduling cont. I made the edits above for this part.
+
+// Revisit your movie schedule exercise from above.
+// Add a conditional so that you only print movies where the currentlyPlaying property is equal to true.
+// Use flexbox to arrange your movie schedule side by side on your web page.
+// If a movie does not have a poster property, give it a placeholder image like this
+// Give all G-rated movies a dotted green border that's 2px wide.
+// Give all PG-rated movies a dotted yellow border that's 2px wide.
+// Give all PG-13 movies a dotted orange border that's 2px wide.
+// Give all R-rated movies a dotted red border that's 2px wide.
