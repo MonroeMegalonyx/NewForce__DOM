@@ -72,54 +72,54 @@
 
 // PRACTICE EXERCISES
 // 1. Movie Poster
-let movieObject = {
-    title: "Star Wars: A New Hope",
-    genre: "Science Fiction",
-    releaseDate: "May 25, 1977",
-};
-
-// Use document.querySelector() to grab a reference to each element in your HTML.
-// Use the .innerHTML property to set the text of each element to the matching value in your object. (For example, the h1 with the id of "title" should contain the title property of your movieObject, etc).
-
-document.querySelector("#title").innerHTML = `${movieObject.title}`;
-document.querySelector("#genre").innerHTML = `${movieObject.genre}`;
-document.querySelector("#release-date").innerHTML = `${movieObject.releaseDate}`;
-
-// 2. Downtown Restuarants
-
-let downtownRestaurants = ["Backyard Pizza and Raw Bar", "The Bodega", "Surin of Thailand", "Bahnhof", "Jim's Steak and Spaghetti House", "The Peddler", "Jewel City Seafood Market", "Black Sheep Burritos & Brews", "La Famiglia", "Le Bistro", "Charlie Graingers", "The Cellar Door"];
-
-// Loop over the downtownRestaurants array.
-// Use the loop to create an <li> element for each item in the array.
-// Use document.querySelector and .innerHTML to add each new <li> element to the #restaurants-list container.
-// You should see a bulleted list of restaurants in the DOM.
-
-for (let i = 0; i < downtownRestaurants.length; i++) {
-    document.querySelector(
-        "#restaurants-list"
-    ).innerHTML += `<li>${downtownRestaurants[i]}</li>`;
-}
-
-// 3. Sandwich Toppings
-
-let sandwichToppings = ["pickles", "extra cheese", "lettuce", "tomatoes", "avocado", "bacon", "mayo", "mustard"]
-
-// Write a function that does the following things:
-// Loop through sandwichToppings
-// Build an <li> element for each item in the array.
-// Use document.querySelector and .innerHTML to print your HTML string to the "#sandwich-container".
-
-function sandwichTopper(){
-    for (let i = 0; i < sandwichToppings.length; i++) {
-        document.querySelector(
-            "#sandwich-container"
-        ).innerHTML += `<li>${sandwichToppings[i]}</li>`;
-    }
-}
-
-// Call the function. You should see a bulleted list of all the sandwich toppings in the DOM.
-
-sandwichTopper()
+//  let movieObject = {
+//      title: "Star Wars: A New Hope",
+//      genre: "Science Fiction",
+//      releaseDate: "May 25, 1977",
+//  };
+//  
+//  // Use document.querySelector() to grab a reference to each element in your HTML.
+//  // Use the .innerHTML property to set the text of each element to the matching value in your object. (For example, the h1 with the id of "title" should contain the title property of your movieObject, etc).
+//  
+//  document.querySelector("#title").innerHTML = `${movieObject.title}`;
+//  document.querySelector("#genre").innerHTML = `${movieObject.genre}`;
+//  document.querySelector("#release-date").innerHTML = `${movieObject.releaseDate}`;
+//  
+//  // 2. Downtown Restuarants
+//  
+//  let downtownRestaurants = ["Backyard Pizza and Raw Bar", "The Bodega", "Surin of Thailand", "Bahnhof", "Jim's Steak and Spaghetti House", "The Peddler", "Jewel City Seafood Market", "Black Sheep Burritos & Brews", "La Famiglia", "Le Bistro", "Charlie Graingers", "The Cellar Door"];
+//  
+//  // Loop over the downtownRestaurants array.
+//  // Use the loop to create an <li> element for each item in the array.
+//  // Use document.querySelector and .innerHTML to add each new <li> element to the #restaurants-list container.
+//  // You should see a bulleted list of restaurants in the DOM.
+//  
+//  for (let i = 0; i < downtownRestaurants.length; i++) {
+//      document.querySelector(
+//          "#restaurants-list"
+//      ).innerHTML += `<li>${downtownRestaurants[i]}</li>`;
+//  }
+//  
+//  // 3. Sandwich Toppings
+//  
+//  let sandwichToppings = ["pickles", "extra cheese", "lettuce", "tomatoes", "avocado", "bacon", "mayo", "mustard"]
+//  
+//  // Write a function that does the following things:
+//  // Loop through sandwichToppings
+//  // Build an <li> element for each item in the array.
+//  // Use document.querySelector and .innerHTML to print your HTML string to the "#sandwich-container".
+//  
+//  function sandwichTopper(){
+//      for (let i = 0; i < sandwichToppings.length; i++) {
+//          document.querySelector(
+//              "#sandwich-container"
+//          ).innerHTML += `<li>${sandwichToppings[i]}</li>`;
+//      }
+//  }
+//  
+//  // Call the function. You should see a bulleted list of all the sandwich toppings in the DOM.
+//  
+//  sandwichTopper()
 
 // 4. Movie Schedule
 // You've been hired to build an app for a movie theater. You need to list all of the movies that are currently playing.
@@ -198,3 +198,5 @@ for (let i = 0; i < movieSchedule.length; i++) {
 // Give all PG-rated movies a dotted yellow border that's 2px wide.
 // Give all PG-13 movies a dotted orange border that's 2px wide.
 // Give all R-rated movies a dotted red border that's 2px wide.
+
+// Exercise 6. 
