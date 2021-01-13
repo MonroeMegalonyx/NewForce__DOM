@@ -209,4 +209,77 @@ for (let i = 0; i < movieSchedule.length; i++) {
 // Give all PG-13 movies a dotted orange border that's 2px wide.
 // Give all R-rated movies a dotted red border that's 2px wide.
 
-// Exercise 6.
+// Exercise 6. Cohort Website
+
+// The buildHtmlString function should take an cohort object as a parameter and return a HTML string with the following elements:
+// An h1 of the cohort's name
+// An h3 for the start date
+// An h3 for the end date
+// An unordered list of instructors
+// An unordered list of technologies learned
+
+let cohort1 = {
+    name: "Cohort One",
+    startDate: "January 15, 2018",
+    endDate: "July 12, 2019",
+    instructors: ["Kim", "Josh", "Jordan"],
+    techStack: ["HTML", "CSS", "JavaScript", "React", "C#", ".NET"]
+}
+  
+let - = {
+   name: "Cohort Two",
+   startDate: "August 15, 2019",
+   endDate: "Feb 10, 2020",
+   instructors: ["Tommy", "Jordan"],
+   techStack: ["HTML", "CSS", "JavaScript", "React", "C#", ".NET"]
+}
+  
+let cohort3 = {
+   name: "Cohort Three",
+   startDate: "April 6, 2020",
+   endDate: "August 20, 2020",
+   instructors: ["Tommy", "Jordan"],
+   techStack: ["HTML", "CSS", "JavaScript", "React", "C#", ".NET"]
+}
+  
+function buildHtmlString(cohortObjectParameter){
+    // Put the cohort name in h1 tag
+    if(cohortObjectParameter === "cohort1"){
+        document.querySelector("#cohort-one-container").innerHTML += `<h1>${cohort1.name}</h1><h3>${cohort1.startDate}</h3><h3>${cohort1.endDate} RIP</h3>`;
+        for (let i = 0; i < cohort1.instructors.length; i++) {document.querySelector("#cohort-one-container").innerHTML += `<li>${cohort1.instructors[i]}</li>`;}
+        for (let i = 0; i < cohort1.techStack.length; i++) {document.querySelector("#cohort-one-container").innerHTML += `<li>${cohort1.techStack[i]}</li>`;}
+    }
+
+    if(cohortObjectParameter === "cohort2"){
+        document.querySelector("#cohort-two-container").innerHTML += `<h1>${cohort2.name}</h1><h3>${cohort2.startDate}</h3><h3>${cohort2.endDate} RIP</h3>`;
+        for (let i = 0; i < cohort2.instructors.length; i++) {document.querySelector("#cohort-two-container").innerHTML += `<li>${cohort2.instructors[i]}</li>`;}
+        for (let i = 0; i < cohort2.techStack.length; i++) {document.querySelector("#cohort-two-container").innerHTML += `<li>${cohort2.techStack[i]}</li>`;}
+    }
+
+    if(cohortObjectParameter === "cohort3"){
+        document.querySelector("#cohort-three-container").innerHTML += `<h1>${cohort3.name}</h1><h3>${cohort3.startDate}</h3><h3>${cohort3.endDate} RIP</h3>`;
+        for (let i = 0; i < cohort3.instructors.length; i++) {document.querySelector("#cohort-three-container").innerHTML += `<li>${cohort3.instructors[i]}</li>`;}
+        for (let i = 0; i < cohort3.techStack.length; i++) {document.querySelector("#cohort-three-container").innerHTML += `<li>${cohort3.techStack[i]}</li>`;}
+    }
+
+}
+ 
+buildHtmlString("cohort1")
+buildHtmlString("cohort2")
+buildHtmlString("cohort3")
+
+// The printHtmlString function should take two parameters:
+// An HTML string
+// The id of the element into which you want to print your HTML string
+
+// The printHtmlString function should do the following things:
+// Use document.querySelector to get a reference to the element in the DOM with whatever id you passed in.
+// Use innerHTML to print the HTML string you passed in to the DOM.
+
+// Call the buildHTMLString function and pass in cohort1 as an example.
+// Store the returned value in a new variable called cohort1HTML.
+// Call the printHtmlString function and pass in your cohort1HTML variable and the id of the element you want to print to ("cohort-one-container").
+
+function printHtmlString(htmlStringParameter, elementIdParameter){
+    // YOUR CODE GOES HERE
+}
